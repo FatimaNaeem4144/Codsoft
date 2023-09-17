@@ -1,0 +1,291 @@
+*, *::before , *::after{
+    box-sizing: border-box;
+}
+.checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 15%;
+        right: 35.9%;
+        background: linear-gradient(90deg, #f099b5, rgb(217, 115, 132));
+        line-height: 0;
+        perspective: 400px;
+        font-size: var(--size);
+    --size: 40px;
+  }
+  
+  .checkbox-wrapper-5 .check input[type="checkbox"],
+    .checkbox-wrapper-5 .check label,
+    .checkbox-wrapper-5 .check label::before,
+    .checkbox-wrapper-5 .check label::after,
+    .checkbox-wrapper-5 .check {
+    appearance: none;
+    display: inline-block;
+    border-radius: var(--size);
+    border: 0;
+    transition: .35s ease-in-out;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .checkbox-wrapper-5 .check label {
+    width: calc(2.2 * var(--size));
+    height: var(--size);
+    background: #d7d7d7;
+    overflow: hidden;
+  }
+  
+  .checkbox-wrapper-5 .check input[type="checkbox"] {
+    position: absolute;
+    z-index: 1;
+    width: calc(.8 * var(--size));
+    height: calc(.8 * var(--size));
+    top: calc(.1 * var(--size));
+    left: calc(.1 * var(--size));
+    background: linear-gradient(45deg, #dedede, #ffffff);
+    box-shadow: 0 6px 7px rgba(0,0,0,0.3);
+    outline: none;
+    margin: 0;
+    
+  }
+  
+  .checkbox-wrapper-5 .check input[type="checkbox"]:checked {
+    left: calc(1.3 * var(--size));
+  }
+  
+  .checkbox-wrapper-5 .check input[type="checkbox"]:checked + label {
+    background: transparent;
+  }
+  
+  .checkbox-wrapper-5 .check label::before,
+    .checkbox-wrapper-5 .check label::after {
+    content: "· ·";
+    position: absolute;
+    overflow: hidden;
+    left: calc(.15 * var(--size));
+    top: calc(.5 * var(--size));
+    height: var(--size);
+    letter-spacing: calc(-0.04 * var(--size));
+    color: #9b9b9b;
+    font-family: "Times New Roman", serif;
+    z-index: 2;
+    font-size: calc(.6 * var(--size));
+    border-radius: 0;
+    transform-origin: 0 0 calc(-0.5 * var(--size));
+    backface-visibility: hidden;
+  }
+  
+  .checkbox-wrapper-5 .check label::after {
+    content: "●";
+    top: calc(.65 * var(--size));
+    left: calc(.2 * var(--size));
+    height: calc(.1 * var(--size));
+    width: calc(.35 * var(--size));
+    font-size: calc(.2 * var(--size));
+    transform-origin: 0 0 calc(-0.4 * var(--size));
+  }
+  
+  .checkbox-wrapper-5 .check input[type="checkbox"]:checked + label::before,
+    .checkbox-wrapper-5 .check input[type="checkbox"]:checked + label::after {
+    left: calc(1.55 * var(--size));
+    top: calc(.4 * var(--size));
+    line-height: calc(.1 * var(--size));
+    transform: rotateY(360deg);
+  }
+  
+  .checkbox-wrapper-5 .check input[type="checkbox"]:checked + label::after {
+    height: calc(.16 * var(--size));
+    top: calc(.55 * var(--size));
+    left: calc(1.6 * var(--size));
+    font-size: calc(.6 * var(--size));
+    line-height: 0;
+  }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto' , sans-serif;
+}
+.calculator{
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px #948080;
+    width: 420px;
+    background-color: pink;
+    overflow: hidden;
+}
+#display{
+    margin-top: 10%;
+    width: 100%;
+    padding: 18px;
+    border-radius: 7px;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: right;
+    border: none;
+    color: rgb(58, 4, 22);
+    background: rgb(217, 115, 132) ;
+} 
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+button{
+    border: 1px solid rgb(131, 28, 45);
+    padding: 8px;
+    font-size: 18px;
+    background-color: pink;
+    color: #581010;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(132, 96, 102, 0.585);
+}
+button:hover{
+    box-shadow: 0 5px 15px rgb(78, 57, 64);
+}
+button:active{
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px rgba(146, 48, 64, 0.585);
+}
+#equalsButton{
+    grid-column: span 2;
+}
+
+@media (max-width:1200px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 17%;
+        right: 35%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+@media (max-width:1000px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 17%;
+        right: 30%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+
+@media (max-width:850px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 32%;
+        right: 30%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+
+@media (max-width:770px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 29%;
+        right: 30%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+@media (max-width:660px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 17%;
+        right: 20%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+@media (max-width:550px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 21%;
+        right: 15%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+@media (max-width:450px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 27%;
+        right: 10%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+
+@media (max-width:400px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 25%;
+        right: 10%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+
+@media (max-width:370px){
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 22%;
+        right: 10%;
+  }
+  #display{
+    margin-top: 14%;
+} 
+}
+
+@media (max-width:330px) {
+    .calculator{
+        padding: 20px;
+        width: 250px;
+    }
+    #display{
+        padding: 10px;
+        margin-top: 14%;
+    } 
+    .buttons{
+        gap: 5px;
+    }
+    button{
+        padding: 5px;
+    }
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 22%;
+        right: 20%;
+  }
+}
+@media (max-width:280px) {
+    .calculator{
+        padding: 10px;
+        width: 220px;
+    }
+    #display{
+        padding: 8px;
+        margin-top: 22%;
+    } 
+    .buttons{
+        gap: 4px;
+    }
+    button{
+        padding: 4px;
+    }
+    .checkbox-wrapper-5 .check {
+        position: absolute; 
+        top: 25.9%;
+        right: 15%;
+  }
+}

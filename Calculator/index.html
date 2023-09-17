@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <div class="checkbox-wrapper-5" >
+            <div class="check" id="backgroundToggle" checked="">
+              <input id="check-5" type="checkbox">
+              <label for="check-5"></label>
+            </div>
+          </div>
+          
+        <input type="text" id="display" class="display">
+        <div class="buttons">
+            <!-- Memory Functions -->
+            <button data-functional="true" id="memoryClear">MC</button>
+            <button data-functional="true" id="memoryRecall">MR</button>
+            <button data-functional="true" id="memoryPlus">M+</button>
+            <button data-functional="true" id="memoryMinus">M-</button>
+            <button data-functional="true" id="clear">C</button>
+
+            <!-- Number Buttons   -->
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+            <button>^</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+            <button>sin</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+            <button>cos</button>
+
+            <button data-functional="true" id="toggleSign">+/-</button>
+            <button>0</button>
+            <button>.</button>
+            <button>+</button>
+            <button>tan</button>
+
+            <button id="percentage" data-functional="true">%</button>
+            <button id="squareRoot" data-functional="true">√</button>
+            <button>log</button>
+            <button data-functional="true" id="equalsButton">=</button>
+        </div>
+    </div>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>

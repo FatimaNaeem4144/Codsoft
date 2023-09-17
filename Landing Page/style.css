@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+*::selection{
+    background: brown;
+    color: #fff;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(assetss/pizza.png);
+    background-size: 50% 90%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    padding: 0px 70px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 0 5px grey;
+}
+.logo{
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.logo span{
+    color: brown;
+}
+.menu a{
+    text-decoration: none ;
+    color: black;
+    padding: 10px 20px;
+}
+.menu a:last-child{
+    background: brown;
+    color: white;
+    border-radius: 8px;
+}
+.headerText{
+    position: absolute;
+    top: 30%;
+    left: 05%;
+    padding: 15px;
+}
+.headerText p{
+    color: #262626;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.headerText h1{
+    font-size: 4em;
+    line-height: 1.5em;
+}
+.headerText h1 span{
+    color: brown;
+}
+.headerText h2{
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+#order{
+    text-decoration: none;
+    color: white;
+    background: brown;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+#order:hover, .menu a:last-child:hover{
+    background: white;
+    border: 2px solid brown;
+    color: brown;
+}
+#dis{
+    text-decoration: none;
+    color: white;
+    background: #262626;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+#dis:hover{
+    background: white;
+    border: 2px solid black;
+    color: black;
+}
+#pizza{
+    position: absolute;
+    bottom: 8%;
+    left: 05%;
+}
+#pizza img{
+    transition: .4s ease;
+}
+#pizza img:hover{
+    transform: translateY(-20px);
+}
+
+
+@media (max-width : 950px){
+    nav{
+        height: 50px;
+        padding: 0px 50px;
+    }
+    .headerText p{
+        letter-spacing: 1px;
+    }
+    .headerText h1{
+        font-size: 3em;
+        line-height: 1em;
+    }
+}
+@media (max-width : 815px){
+    nav a{
+        display: none;
+    }
+}
+@media (max-width : 400px){
+    header{
+        background-size: 80% 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
